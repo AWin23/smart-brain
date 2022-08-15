@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Linked to Back-end of project: https://github.com/AWin23/smart-brain-api
+
 ## Available Scripts
 
 In the project directory, you can run:
