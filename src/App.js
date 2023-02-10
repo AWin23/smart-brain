@@ -1,6 +1,7 @@
 import { Component } from "react";
 import "./App.css";
 import Particles from "react-tsparticles";
+import Clarifai from 'clarifai';
 import { loadFull } from "tsparticles";
 import Navigation from "./components/Navigation/Navigation";
 import Signin from "./components/Signin/Signin";
@@ -10,9 +11,9 @@ import Logo from "./components/Logo/Logo";
 import Rank from "./components/Rank/Rank";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 
-// const app = new Clarifai.App({
-// 	apiKey: '1c750faf49274fe5a5ef4fcd0603653c'
-// });
+const app = new Clarifai.App({
+	apiKey: '1c750faf49274fe5a5ef4fcd0603653c'
+});
 
 
 const particlesInit = async (main) => {
@@ -195,28 +196,34 @@ class App extends Component{
 
 	//submits a route for the image URL into the Face detection thing
 	onPictureSubmit = () => {
-		this.setState({imageUrl: this.state.input})
-		fetch('https://pure-waters-47974.herokuapp.com/imageurl', {
-			method: 'post',
-			headers: {'Content-Type': 'application/json'},
-			body: JSON.stringify({
-			  input: this.state.input
-			})
-		})
-		.then(response => response.json())
+		this.setState({imageUrl: this.state.input});
+		app.models
+		.predict(
+		  {
+			id: 'face-detection',
+			name: 'face-detection',
+			version: '6dc7e46bc9124c5c8824be4822abe105',
+			type: 'visual-detector',
+		  }, this.state.input)
 		.then(response => {
-			if(response){
+		  console.log('hi', response)
+		  if (response) {
 			fetch('https://pure-waters-47974.herokuapp.com/image', {
-				method: 'put',
-				headers: {'Content-Type': 'application/json'},
-				body: JSON.stringify({
-					id: this.state.user.id
-				})
+			  method: 'put',
+			  headers: {'Content-Type': 'application/json'},
+			  body: JSON.stringify({
+				id: this.state.user.id
+			  })
 			})
+			  .then(response => response.json())
+			  .then(count => {
+				this.setState(Object.assign(this.state.user, { entries: count}))
+			  })
+  
 			}
+			console.log(response);
 			this.displayFaceBox(this.calculateFaceLocation(response))
 		})
-
 			//console.log(response);
 			// console.log(response.outputs[0].data.regions[0].region_info.bounding_box);
 		.catch(err => console.log(err));
