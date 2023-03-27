@@ -168,6 +168,45 @@ class App extends Component{
 	}})
 	}
 
+	createGuest = () => {
+        const email = 'guest@gmail.com';
+        const password = 'password';
+        const name = 'Guest';
+        fetch('http://localhost:3000/signin', {
+           method: 'post',
+           headers: {'Content-Type': 'application/json'},
+           body: JSON.stringify({
+               email: email,
+               password: password
+           }) 
+        })
+        .then(response => response.json())
+        .then(user => {
+            if(user.id){
+                console.log('guest already created')
+            } else {
+                //delete and re-create guest.
+                console.log('create guest')
+                this.deleteUser(email, password);
+                this.onSubmitRegister(email, password, name);
+            }
+        })
+    }
+
+    deleteUser = (email, password) => {
+        console.log(email, password)
+        fetch('http://localhost:3000/delete', {
+           method: 'delete',
+           headers: {'Content-Type': 'application/json'},
+           body: JSON.stringify({
+               email: email ,
+               password: password
+           }) 
+        })
+        .then(response => response.json())
+    }
+
+
 	calculateFaceLocation = (data) => {
 		const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
 		const image = document.getElementById('inputimage');
@@ -182,7 +221,7 @@ class App extends Component{
 		//   bottomRow: height - clarifaiFace.bottom_row * height
 		}
 	  }
-
+	 
 	
 
 	displayFaceBox = (box) => {
