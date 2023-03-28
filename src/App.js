@@ -1,6 +1,7 @@
 import { Component } from "react";
 import "./App.css";
-import Particles from "react-tsparticles";
+//import Particles from "react-tsparticles";
+import ParticlesBg from 'particles-bg';
 import Clarifai from 'clarifai';
 import { loadFull } from "tsparticles";
 import Navigation from "./components/Navigation/Navigation";
@@ -268,14 +269,14 @@ class App extends Component{
 		.catch(err => console.log(err));
 	}
 
-   particlesOptions = async (main) => {
-    console.log(main);
+//    particlesOptions = async (main) => {
+//     console.log(main);
 
-    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    await loadFull(main);
-  };
+//     // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+//     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+//     // starting from v2 you can add only the features you need reducing the bundle size
+//     await loadFull(main);
+//   };
 
   onRouteChange = (route) => {
 	  if(route === 'signout') {
@@ -290,9 +291,7 @@ class App extends Component{
 	const  { isSignedIn, imageUrl, route, box } = this.state;
     return (
 			<div className="App">
-				<Particles className="particles" id="tsparticles" init={particlesInit} loaded={particlesLoaded} options={particleEffect} 
-				/>
-
+				 <ParticlesBg type="cobweb" bg={true} />
       <Navigation isSignedIn={this.state.isSignedIn} onRouteChange={this.onRouteChange}/>
 	  { route === 'home' 
 	  ?<div>
