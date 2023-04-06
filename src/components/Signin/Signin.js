@@ -84,10 +84,10 @@ class Signin extends React.Component {
 
         <p> <strong>APP IS CONSTANTLY UNDER UPDATES AND DEVELOPMENT. FEEL FREE TO SUGGEST ANY CHANGES at: nguyendrew20@gmail.com</strong></p>
         <div>
-          <mark>
-          <p><strong>Guest email: guest@gmail.com </strong></p>
-          <p><strong>Guest password: guest</strong></p>
-          </mark>
+          
+          <p><strong><mark>Guest email: guest@gmail.com </mark></strong></p>
+          <p><strong><mark>Guest password: guest</mark></strong></p>
+         
         </div>
         {/* <div className="lh-copy mt3">
         <p onClick={() => GuestLogRegister(this.props.loadUser,this.props.onRouteChange,'signin', signInEmail, signInPassword, "guest")} className="f6 link dim db pointer pv2">Sign in as Guest</p>
