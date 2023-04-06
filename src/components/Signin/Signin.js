@@ -41,9 +41,9 @@ class Signin extends React.Component {
     return (
       <article className="br3 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
       <main className="pa4 black-80">
-      <p> <strong>Smart-Brain</strong> is an online facial recognition application that detects faces on image addresses.'</p>
+      <p> <strong>Smart-Brain</strong> is an online facial recognition application that detects faces on image addresses.</p>
       <p>
-      <strong>Sign in</strong> to use Smart-Brain. Otherwise make an account.'
+      <strong>Sign in</strong> to use Smart-Brain. Otherwise make an account.
     </p>
    
       <div className="measure">
@@ -82,11 +82,12 @@ class Signin extends React.Component {
           <p  onClick={() => onRouteChange('register')} className="f6 link dim black db pointer">Register</p>
         </div>
 
-        <p> <strong>IS APP IS CONSTANTLY UNDER UPDATES AND DEVELOPMENT. FEEL FREE TO SUGEEST ANY CHANGES at: nguyendrew20@gmail.com</strong></p>
-        <legend className="f1 fw6 ph0 mh0">****************</legend>
+        <p> <strong>APP IS CONSTANTLY UNDER UPDATES AND DEVELOPMENT. FEEL FREE TO SUGGEST ANY CHANGES at: nguyendrew20@gmail.com</strong></p>
         <div>
+          <mark>
           <p><strong>Guest email: guest@gmail.com </strong></p>
           <p><strong>Guest password: guest</strong></p>
+          </mark>
         </div>
         {/* <div className="lh-copy mt3">
         <p onClick={() => GuestLogRegister(this.props.loadUser,this.props.onRouteChange,'signin', signInEmail, signInPassword, "guest")} className="f6 link dim db pointer pv2">Sign in as Guest</p>
