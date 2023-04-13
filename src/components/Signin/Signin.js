@@ -5,10 +5,12 @@ class Signin extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      signInEmail: '',
-      signInPassword: ''
+      signInEmail: 'guest@gmail.com',
+      signInPassword: 'guest'
     }
+    this.onSubmitSignIn(); // call onSubmitSignIn with default account
   }
+  
   onEmailChange = (event) => {
     this.setState({signInEmail: event.target.value})
   }
@@ -43,7 +45,8 @@ class Signin extends React.Component {
       <main className="pa4 black-80">
       <p> <strong>Smart-Brain</strong> is an online facial recognition application that detects faces on image addresses.</p>
       <p>
-      <strong>Sign in</strong> to use Smart-Brain. Otherwise make an account.
+     {/*<strong>Sign in</strong> to use Smart-Brain. Otherwise make an account.*/}
+     <p> <strong><mark>YOU WILL LOGIN IN A BIT. WAIT SOME SECONDS. NEW AUTOMATED LOGIN FEATURE</mark></strong></p>
     </p>
    
       <div className="measure">
@@ -84,7 +87,8 @@ class Signin extends React.Component {
 
         <p> <strong>APP IS CONSTANTLY UNDER UPDATES AND DEVELOPMENT. FEEL FREE TO SUGGEST ANY CHANGES at: nguyendrew20@gmail.com</strong></p>
         <div>
-          
+        <p> <strong><mark>YOU WILL LOGIN IN A BIT. WAIT SOME SECONDS. NEW AUTOMATED LOGIN FEATURE</mark></strong></p>
+        <div>
           <p><strong><mark>Guest email: guest@gmail.com </mark></strong></p>
           <p><strong><mark>Guest password: guest</mark></strong></p>
          
@@ -92,6 +96,7 @@ class Signin extends React.Component {
         {/* <div className="lh-copy mt3">
         <p onClick={() => GuestLogRegister(this.props.loadUser,this.props.onRouteChange,'signin', signInEmail, signInPassword, "guest")} className="f6 link dim db pointer pv2">Sign in as Guest</p>
               </div> */}
+      </div>
       </div>
       </main>
       </article>
