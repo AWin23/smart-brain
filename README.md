@@ -4,6 +4,26 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Linked to Back-end of project: https://github.com/AWin23/smart-brain-api
 
+
+# Smart Brain
+
+• Developed full-stack facial recognition application deployed and hosted on Heroku servers.
+
+• Utilizes Heroku PostgreSQL to store newly created accounts in a database.
+
+• Developed a user-friendly sign-in and registration interface with React.js to optimize the account creation and login process.
+
+• Connected Clarifai API to application which detects faces on image URLs inputted by user.
+
+• Node.js used to set up back-end of API which connects the Heroku Postgres to the web application allowing storage
+of accounts.
+
+![](Register.png)
+![](ImageURL.png)
+![](LoginPage.png)
+
+**  I ADDED A NEW FEATURE TO MAKE THINGS EASIER FOR THE USERS. INSTEAD OF HAVING TO LOGIN INTO AN ACCOUNT, THEY WILL AUTOLOGIN INTO A GUEST ACCOUNT I CREATED SO EVERYONE GETS TO ENJOY THE APPLICATION :)) **
+
 ## Available Scripts
 
 In the project directory, you can run:
