@@ -182,7 +182,8 @@ class App extends Component{
         .then(response => response.json())
     }
 
-
+	// function to calculate the face. 
+	//	does a bunch of math
 	calculateFaceLocation = (data) => {
 		const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
 		const image = document.getElementById('inputimage');
