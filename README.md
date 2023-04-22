@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Linked to Back-end of project: https://github.com/AWin23/smart-brain-api
 
 
-# Smart Brain
+## Smart Brain
 
 • Developed full-stack facial recognition application deployed and hosted on Heroku servers.
 
