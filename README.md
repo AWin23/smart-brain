@@ -18,7 +18,7 @@ Linked to Back-end of project: https://github.com/AWin23/smart-brain-api
 • Node.js used to set up back-end of API which connects the Heroku Postgres to the web application allowing storage
 of accounts.
 
-![](Login.png)
+//![](Login.png)
 
 **  I ADDED A NEW FEATURE TO MAKE THINGS EASIER FOR THE USERS. INSTEAD OF HAVING TO LOGIN INTO AN ACCOUNT, THEY WILL AUTOLOGIN INTO A GUEST ACCOUNT I CREATED SO EVERYONE GETS TO ENJOY THE APPLICATION :)) **
 
