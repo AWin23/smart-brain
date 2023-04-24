@@ -25,7 +25,7 @@ of accounts.
 
 ** This is when you input an image url into the URL bar. A square captures the face of an image. In this case I am using Eren Yeager's face from one of my favorite animes Attack on Titan**
 
-![](ImageURL.png)
+![](FacePic.png)
 
 **  I ADDED A NEW FEATURE TO MAKE THINGS EASIER FOR THE USERS. INSTEAD OF HAVING TO LOGIN INTO AN ACCOUNT, THEY WILL AUTOLOGIN INTO A GUEST ACCOUNT I CREATED SO EVERYONE GETS TO ENJOY THE APPLICATION :)) **
 
